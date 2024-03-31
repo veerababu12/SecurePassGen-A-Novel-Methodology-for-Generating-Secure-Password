@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+
+  
+  <script>
+
+function login() {
+
+    var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+
+      var validCredentials = {
+        "20nu1a05a6@nsrit.edu.in": "veera",
+        "20nu1a05a3@nsrit.edu.in": "chalice",
+        "20nu1a0586@nsrit.edu.in": "divya",
+        "20nu1a05b9@nsrit.edu.in": "suhel",
+        "20nu1a05a7@nsrit.edu.in": "govardhan"
+      };
+
+
+      if (validCredentials.hasOwnProperty(username) && validCredentials[username] === password) {
+        alert("Login successful!");
+        window.location.href='dashboard.html';
+
+    } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    }
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <b>PassEntropy Pro</b> </a> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     
+    </div>
+  </nav>
+
+ <!-- User Authentication -->
+<section class="section-padding bg-light" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+        <div class="section-title">
+          <h1 class="display-4 text-white fw-semibold">User Authentication</h1>
+          <div class="line bg-white"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
+      <div class="col-lg-4">
+        <form class="row g-3 p-lg-5 p-4 bg-white theme-shadow"  onsubmit="login(); return false;">
+          <div class="form-group col-lg-12">
+            <input type="text" id="username" class="form-control" placeholder="Enter username">
+          </div>
+          <div class="form-group col-lg-12">
+            <input type="password" id="password" class="form-control" placeholder="Enter password">
+          </div>
+          <div class="form-group col-lg-12 d-grid">
+            <button type="submit" class="btn btn-brand" onclick="login()">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-dark">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-3 col-sm-6">
+            <a href="#"><h5 class="text-white">PassEntropy Pro</h5></a>
+            <div class="line"></div>
+            <p>"Revolutionizing digital security with advanced password generation. Your tailored solution for robust and personalized password creation."</p>
+            <div class="social-icons">
+              <a href="#"><i class="ri-twitter-fill"></i></a>&nbsp;
+              <a href="#"><i class="ri-linkedin-fill"></i></a>&nbsp;
+              <a href="#"><i class="ri-github-fill"></i></a>&nbsp;
+
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-white">FEATURES</h5>
+            <div class="line"></div>
+            <ul>
+              <li><a href="#">Advanced Password Generation</a></li>
+              <li><a href="#">Customizable Security Options</a></li>
+              <li><a href="#">Intelligent Access Controls</a></li>
+              <li><a href="#">Seamless User Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-white">PROJECT DETAILS</h5>
+            <div class="line"></div>
+            <ul>
+              <li><a href="#">Technical Paper</a></li>
+              <li><a href="#">Random Password Generation</a></li>
+              <li><a href="#">NSRIT College</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-white">CONTACT</h5>
+            <div class="line"></div>
+            <ul>
+              <li>Vizag, Chinnamusidivada</li>
+              <li>Phone: 6302733687</li>
+              <li>Email: vinuvera1234@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row g-4 justify-content-between">
+          <div class="col-auto">
+            <p class="mb-0">© 2023 Tech Paper Project. All Rights Reserved</p>
+          </div>
+          <div class="col-auto">
+            <p class="mb-0">Designed with 💜 By <a
+                href="https://www.youtube.com/channel/UCYMEEnLzGGGIpQQ3Nu_sBsQ">Veera</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

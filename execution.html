@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Execution</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .background-image {
+      background-image: url('./assets/images/bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #card {
+      color: darkcyan;
+      border: 1px solid white;
+      border-radius: 10px;
+      height: auto;
+      background-color: black;
+      opacity: 0.7;
+      margin: 10% auto;
+      box-shadow: 1px 1px 9px 1px;
+      transform: scale(0.8);
+      padding: 20px;
+    }
+
+    #card input[type="text"] {
+      padding: 10px;
+      border-radius: 10px;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 20px;
+      color: darkcyan;
+    }
+
+    input[type="submit"] {
+      margin-left: 35%;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      #card {
+        margin: 5% auto;
+      }
+
+      #card input[type="text"] {
+        width: 100%;
+      }
+
+      input[type="button"] {
+        margin-left: 28%;
+      }
+    }
+  </style>
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <b>PassEntropy Pro</b>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="usecase.html">Flow chart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.pnrjournal.com/index.php/home/article/download/5490/6642/6721">Paper</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="execution.html">Execution</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="background-image">
+    <div class="container-fluid m-2">
+      <div class="row">
+        <div class="col-lg-5 col-md-7 col-sm-10 col-xs-12" id="card">
+          <br><br><br>
+          <h1 align="center" style="color: darkcyan;">Password Generator</h1><br><br><br><br>
+          <form id="passwordForm" onsubmit="password(); return false;">
+            <div>&nbsp;&nbsp;<input id="key" type="text" placeholder="Enter Key" required pattern="[0-9]+" title="Please enter only integers."></div><br><br>
+            <div>&nbsp;&nbsp;<input id="pwd" type="text" placeholder="Generated password"></div><br><br>
+            <div><input type="submit" value="Generate" class="btn btn-primary"></div><br><br><br>
+          </form>
+          <p id="p"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-dark">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-3 col-sm-6">
+            <a href="#"><h5 class="text-white">PassEntropy Pro</h5></a>
+            <div class="line"></div>
+            <p>"Revolutionizing digital security with advanced password generation. Your tailored solution for robust and personalized password creation."</p>
+            <div class="social-icons">
+              <a href="#"><i class="ri-twitter-fill"></i></a>&nbsp;
+              <a href="#"><i class="ri-linkedin-fill"></i></a>&nbsp;
+              <a href="#"><i class="ri-github-fill"></i></a>&nbsp;
+
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-white">FEATURES</h5>
+            <div class="line"></div>
+            <ul>
+              <li><a href="#">Advanced Password Generation</a></li>
+              <li><a href="#">Customizable Security Options</a></li>
+              <li><a href="#">Intelligent Access Controls</a></li>
+              <li><a href="#">Seamless User Experience</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-white">PROJECT DETAILS</h5>
+            <div class="line"></div>
+            <ul>
+              <li><a href="#">Technical Paper</a></li>
+              <li><a href="#">Random Password Generation</a></li>
+              <li><a href="#">NSRIT College</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-white">CONTACT</h5>
+            <div class="line"></div>
+            <ul>
+              <li>Vizag, Chinnamusidivada</li>
+              <li>Phone: 6302733687</li>
+              <li>Email: vinuvera1234@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row g-4 justify-content-between">
+          <div class="col-auto">
+            <p class="mb-0">© 2023 Tech Paper Project. All Rights Reserved</p>
+          </div>
+          <div class="col-auto">
+            <p class="mb-0">Designed with 💜 By <a
+                href="https://www.youtube.com/channel/UCYMEEnLzGGGIpQQ3Nu_sBsQ">Veera</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+  <script>
+    function password() {
+      let l1 = [];
+      let num = '';
+      var key = parseInt(document.getElementById('key').value);
+
+      for (var i = 0; i < 10; i++) {
+        let z = parseInt(Math.floor(Math.random() * 10));
+        z = z + 97;
+        z = z + key;
+        l1.push(z);
+      }
+
+      for (var i = 0; i < 10; i++) {
+        while (l1[i] > 122) {
+          l1[i] = l1[i] - 26;
+        }
+      }
+
+      for (i = 0; i < 10; i++) {
+        let ch = String.fromCharCode(l1[i]);
+        if (i == 0) {
+          ch = ch.toUpperCase();
+        }
+        num = num + ch;
+      }
+
+      num += '@1';
+
+      document.getElementById('pwd').value = num;
+      document.getElementById('p').innerHTML = "You can also check the generated password by following web sites" + "<br>" + "<a href='https://www.passwordmonster.com/'>password monster</a>";
+      document.getElementById('p').setAttribute("style", "color:white;");
+
+   
+    }
+    
+  </script>
+</body>
+
+</html>
